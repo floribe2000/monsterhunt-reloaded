@@ -1,5 +1,6 @@
 package de.geistlande.monsterhunt
 
+import de.geistlande.monsterhunt.config.loadSettings
 import org.bukkit.permissions.PermissionDefault
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.plugin.java.annotation.dependency.SoftDependency
@@ -19,5 +20,6 @@ import org.bukkit.plugin.java.annotation.plugin.author.Author
 class Plugin : JavaPlugin() {
     override fun onEnable() {
         super.onEnable()
+        loadSettings(dataFolder.absolutePath)
     }
 }
