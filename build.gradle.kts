@@ -26,6 +26,7 @@ dependencies {
     compileOnly("com.github.MilkBowl:VaultAPI:1.7")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
     implementation("com.charleskorn.kaml:kaml:0.48.0")
+    implementation("org.kodein.di:kodein-di-jvm:7.12.0")
 
     testImplementation(kotlin("test"))
     testImplementation("org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT")

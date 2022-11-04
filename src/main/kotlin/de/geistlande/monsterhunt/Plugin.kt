@@ -9,6 +9,8 @@ import org.bukkit.plugin.java.annotation.plugin.Description
 import org.bukkit.plugin.java.annotation.plugin.LogPrefix
 import org.bukkit.plugin.java.annotation.plugin.Plugin
 import org.bukkit.plugin.java.annotation.plugin.author.Author
+import org.kodein.di.DI
+import org.kodein.di.bindSingleton
 
 @Plugin(name = "MonsterHunt Reloaded", version = "1.0")
 @Description("A plugin to reward players for hunting monsters")
@@ -21,5 +23,9 @@ class Plugin : JavaPlugin() {
     override fun onEnable() {
         super.onEnable()
         loadSettings(dataFolder.absolutePath)
+
+        val di = DI {
+            bindSingleton { server }
+        }
     }
 }
